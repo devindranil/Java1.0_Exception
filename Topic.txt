@@ -1,0 +1,90 @@
+-----------Topic Covered in this section--------------
+
+1. Exception in Java ^
+2. Exception Handling in Java ^
+3. Exception Handling Keywords(try, catch, finally, throw, throws)
+4. Exception Hierarchy ^
+5. Types of Exception ^
+    Checked Exception(identified by compiler) 
+    unchecked Exception(not identified by compiler) ^
+6. Finally block in Java
+    6.1 Use of finally block
+    6.2 Case 1: When an exception does not rise 
+    6.3 Case 2: When the exception rises and handled by the catch block
+    6.4 Case 3: When the exception rises and not handled by the catch block
+    6.5 Case 4: When the exception rises and handled by the catch block and again exception rises
+
+7. Multiple Try and catch block
+8. Multiple catch block
+
+9. Nested try block
+    9.1 Syntax of nested try block
+    9.2 Example of nested try block
+
+10. Java nested catch
+    10.1 Syntax of nested catch block
+    10.2 Example of nested catch block
+
+11. Java nested finally
+    11.1 Syntax of nested finally block
+    11.2 Example of nested finally block
+
+12. final vs finally vs finalize
+
+13. throw & throws keyword in java
+
+14. try-catch vs throws in java 
+
+15. User-defined exception in java
+    15.1 Example of user-defined exception
+    15.2 Example of custom exception
+
+
+
+--------------Exception In Java-------------
+What is Exception in Java?
+An exception is an event, which occurs during the execution of a program, that disturb the normal flow of the program's instructions.
+
+Exception is a problem that arises during the execution of a program. An exception can occur for many different reasons, including the following:
+
+- A user has entered invalid data.
+- A file that needs to be opened cannot be found.
+- A network connection has been lost in the middle of communications or the JVM has run out of memory.
+
+Normally, program terminates abnormally after an exception is thrown. However, it is possible to handle the exception using try-catch block.
+
+Exception Handling in Java
+Exception handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
+
+Advantage of Exception Handling
+The core advantage of exception handling is to maintain the normal flow of the application. An exception normally disrupts the normal flow of the application that is why we use exception handling.
+
+Let's take a scenario:
+There are 10 statements in your program and there occurs an exception at statement 5, rest of the code will not be executed i.e. statement 6 to 10 will not be executed. If we perform exception handling, rest of the statement will be executed. That is why we use exception handling in java.
+
+Exception Handling Keywords
+There are 5 keywords used in java exception handling.
+
+- try
+- catch
+- finally
+- throw
+- throws
+
+try block
+The try block contains set of statements where an exception can occur. A try block is always followed by a catch block, which handles the exception that occurs in associated try block. A try block must be followed by catch blocks or finally block or both.
+
+catch block
+A catch block is where you handle the exceptions, this block must follow the try block. A single try block can have several catch blocks associated with it. You can catch different exceptions in different catch blocks. When an exception occurs in try block, the corresponding catch block that handles that particular exception executes. For example if an arithmetic exception occurs in try block then the statements enclosed in catch block for arithmetic exception executes.
+
+finally block
+The finally block is optional and can be used only with try-catch block or try block. The code of finally block is always executed whether exception is handled or not handled. The finally block will not be executed if program exits(either by calling System.exit() or by causing a fatal error that causes the process to abort).
+
+throw keyword
+The throw keyword is used to throw an exception. Let's see the example of throw keyword.
+
+throws keyword
+The throws keyword is used to declare exceptions. It gives an information to the programmer that there may occur an exception so it is better for the programmer to provide the exception handling code so that normal flow can be maintained.
+
+---------usage of throw vs throws keyword-----------
+The throw keyword is used to throw custom or user defined exception. The throws keyword is used to declare an exception.
